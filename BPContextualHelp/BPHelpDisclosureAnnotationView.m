@@ -98,8 +98,6 @@ static const CGFloat BPFontSize = 12.0;
 #if !__has_feature(objc_arc)
 - (void)dealloc
 {
-	[_annotation release], _annotation = nil;
-	
 	[_textLabel release], _textLabel = nil;
 	[_darkBevelLayer release], _darkBevelLayer = nil;
 	[_lightBevelLayer release], _lightBevelLayer = nil;

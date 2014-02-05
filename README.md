@@ -1,5 +1,5 @@
 <p align="center" >
-  <img src="https://raw.github.com/brittonmobile/BPContextualHelp/assets/annotations.jpg" alt="BPContextualHelp" title="BPContextualHelp">
+  <img src="https://raw2.github.com/brittonmobile/BPContextualHelp/assets/annotations.jpg" alt="BPContextualHelp" title="BPContextualHelp">
 </p>
 
 BPContextualHelp is a custom control based on the contextual help balloons in the pre-iOS 7 iPhoto app. It currently provides three types of annotations: a standard balloon, a balloon with a disclosure indicator, and a circular tap. Full accessibility support is provided for the annotations.

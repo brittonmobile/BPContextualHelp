@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name     = 'BPContextualHelp'
-  s.version  = '1.0.0'
+  s.version  = '1.0.1'
   s.license  = 'MIT'
   s.summary  = 'A view for displaying popup contextual help annotations.'
   s.homepage = 'https://github.com/brittonmobile/BPContextualHelp'
   s.authors  = { 'Ryan Britton' => 'ryan@brittonmobile.com' }
-  s.source   = { :git => 'https://github.com/brittonmobile/BPContextualHelp.git', :tag => "1.0.0" }
+  s.source   = { :git => 'https://github.com/brittonmobile/BPContextualHelp.git', :tag => "1.0.1" }
   s.requires_arc = false
 
   s.ios.deployment_target = '5.1'

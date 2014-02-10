@@ -28,6 +28,57 @@
 
 @implementation BPHelpAnnotation
 
+- (id)initWithDirection:(BPHelpAnnotationDirection)direction barButtonItem:(UIBarButtonItem *)anchorItem inBar:(UIView *)bar contentOffset:(CGSize)contentOffset andText:(NSString *)text
+{
+	if ((self = [super init]))
+	{
+		//We should be able to just do this:
+		// _anchorView = [anchorItem.view retain];
+		//but view method is private, so we have to do this:
+		if (anchorItem.customView != nil)
+		{
+			_anchorView = [anchorItem.customView bp_retain];
+		}
+		else
+		{
+			for (UIView *subview in bar.subviews)
+			{
+				if ([subview isKindOfClass:[UIControl class]])
+				{
+					for (id target in ((UIControl *) subview).allTargets)
+					{
+						if (target == anchorItem)
+						{
+							[_anchorView bp_release];
+							_anchorView = [subview bp_retain];
+							break;
+						}
+						else if (target == anchorItem.target)
+						{
+							NSArray *actions = [(UIControl *) subview actionsForTarget:target forControlEvent:UIControlEventTouchUpInside];
+							for (NSString *action in actions)
+							{
+								if (NSSelectorFromString(action) == anchorItem.action)
+								{
+									[_anchorView bp_release];
+									_anchorView = [subview bp_retain];
+									break;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		_direction = direction;
+		_contentOffset = contentOffset;
+		_text = [text copy];
+	}
+	
+	return self;
+}
+
 - (id)initWithDirection:(BPHelpAnnotationDirection)direction anchorView:(UIView *)anchorView contentOffset:(CGSize)contentOffset andText:(NSString *)text
 {
 	if ((self = [super init]))

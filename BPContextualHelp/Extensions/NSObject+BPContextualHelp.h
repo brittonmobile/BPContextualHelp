@@ -34,5 +34,6 @@
 
 - (id)bp_autorelease;
 - (id)bp_retain;
+- (oneway void)bp_release;
 
 @end

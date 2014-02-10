@@ -42,4 +42,11 @@
 	#endif
 }
 
+- (oneway void)bp_release
+{
+#if !__has_feature(objc_arc)
+	[self release];
+#endif
+}
+
 @end

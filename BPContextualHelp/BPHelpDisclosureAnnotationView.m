@@ -140,7 +140,19 @@ static const CGFloat BPFontSize = 12.0;
 	}
 	else
 	{
-		contentSize = [self.annotation.text sizeWithFont:[UIFont boldSystemFontOfSize:BPFontSize] constrainedToSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
+		UIFont *font = [UIFont boldSystemFontOfSize:BPFontSize];
+		CGSize maximumSize = CGSizeMake(BPMaximumWidth, CGFLOAT_MAX);
+		NSLineBreakMode lineBreakMode = NSLineBreakByWordWrapping;
+		
+		NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self.annotation.text methodSignatureForSelector:@selector(sizeWithFont:forWidth:lineBreakMode:)]];
+		[invocation setTarget:self.annotation.text];
+		[invocation setSelector:@selector(sizeWithFont:forWidth:lineBreakMode:)];
+		[invocation setArgument:&font atIndex:2];
+		[invocation setArgument:&maximumSize atIndex:3];
+		[invocation setArgument:&lineBreakMode atIndex:4];
+		[invocation invoke];
+		[invocation getReturnValue:&contentSize];
+		//contentSize = [self.annotation.text sizeWithFont:[UIFont boldSystemFontOfSize:BPFontSize] constrainedToSize:CGSizeMake(BPMaximumWidth, CGFLOAT_MAX) lineBreakMode:NSLineBreakByWordWrapping];
 	}
 	
 	contentSize = CGSizeMake(ceil(contentSize.width), ceil(contentSize.height));

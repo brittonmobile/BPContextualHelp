@@ -60,6 +60,7 @@ typedef void (^BPHelpAnnotationTapBlock)();
 @property (nonatomic, readonly) NSString *text;
 @property (nonatomic, copy) BPHelpAnnotationTapBlock tapBlock;
 
+- (id)initWithDirection:(BPHelpAnnotationDirection)direction barButtonItem:(UIBarButtonItem *)anchorItem inBar:(UIView *)bar contentOffset:(CGSize)contentOffset andText:(NSString *)text;
 - (id)initWithDirection:(BPHelpAnnotationDirection)direction anchorView:(UIView *)anchorView contentOffset:(CGSize)contentOffset andText:(NSString *)text;
 - (id)initWithDirection:(BPHelpAnnotationDirection)direction landscapeAnchorPoint:(CGPoint)landscapeAnchorPoint portraitAnchorPoint:(CGPoint)portraitAnchorPoint contentOffset:(CGSize)contentOffset andText:(NSString *)text;
 - (id)initWithDirection:(BPHelpAnnotationDirection)direction landscapeAnchorPoint:(CGPoint)landscapeAnchorPoint portraitAnchorPoint:(CGPoint)portraitAnchorPoint contentOffset:(CGSize)contentOffset andText:(NSString *)text tapBlock:(BPHelpAnnotationTapBlock)tapBlock;

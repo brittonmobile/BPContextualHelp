@@ -91,6 +91,34 @@ static const CGFloat BPFontSize = 12.0;
 }
 #endif
 
+- (UIViewController *)viewControllerForPositioningAnnotationOnAnchorView:(UIView *)anchorView
+{
+	UIViewController *viewController = [anchorView viewController];
+	if (viewController.navigationController != nil) viewController = viewController.navigationController;
+	
+	if (viewController.presentingViewController != nil)
+	{
+		if (viewController.navigationController != nil && viewController.modalPresentationStyle == UIModalPresentationFullScreen)
+		{
+			viewController = viewController.navigationController;
+		}
+		else if (viewController.modalPresentationStyle == UIModalPresentationFullScreen)
+		{
+			//Do nothing, keep it at the current value
+		}
+		else if (viewController.presentingViewController.modalPresentationStyle == UIModalPresentationFullScreen)
+		{
+			viewController = viewController.presentingViewController;
+		}
+	}
+	else
+	{
+		viewController = viewController.view.window.rootViewController;
+	}
+	
+	return viewController;
+}
+
 - (void)updateLayoutForOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	UIView *wrapperView = self.superview;
@@ -99,24 +127,8 @@ static const CGFloat BPFontSize = 12.0;
 	CGRect anchorFrame = CGRectMake(anchorPoint.x, anchorPoint.y, 1.0, 1.0);
 	if (anchorView != nil)
 	{
-		UIViewController *viewController = [anchorView viewController];
-		if (viewController.navigationController != nil) viewController = viewController.navigationController;
-		
-		if (viewController.presentingViewController != nil && viewController.modalPresentationStyle == UIModalPresentationFullScreen)
-		{
-			if (viewController.navigationController != nil)
-			{
-				anchorFrame = [anchorView convertRect:anchorView.bounds toView:viewController.navigationController.view];
-			}
-			else
-			{
-				anchorFrame = [anchorView convertRect:anchorView.bounds toView:viewController.view];
-			}
-		}
-		else
-		{
-			anchorFrame = [anchorView convertRect:anchorView.bounds toView:viewController.view.window.rootViewController.view];
-		}
+		UIViewController *viewController = [self viewControllerForPositioningAnnotationOnAnchorView:anchorView];
+		anchorFrame = [anchorView convertRect:anchorView.bounds toView:viewController.view];
 	}
 	
 	//Figure out the content size

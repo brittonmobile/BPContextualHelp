@@ -48,15 +48,13 @@ static const CGFloat BPCircleRadius = 35.0;
 
 - (void)updateLayoutForOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	UIView *wrapperView = self.superview;
 	UIView *anchorView = self.annotation.anchorView;
 	CGPoint anchorPoint = UIInterfaceOrientationIsLandscape(interfaceOrientation) ? self.annotation.landscapeAnchorPoint : self.annotation.portraitAnchorPoint;
 	CGRect anchorFrame = CGRectMake(anchorPoint.x, anchorPoint.y, 1.0, 1.0);
 	if (anchorView != nil)
 	{
-		anchorFrame = [anchorView convertRect:anchorView.bounds toView:nil];
-		anchorFrame = [anchorView.window convertRect:anchorFrame toWindow:self.window];
-		anchorFrame = [wrapperView convertRect:anchorFrame fromView:nil];
+		UIViewController *viewController = [self viewControllerForPositioningAnnotationOnAnchorView:anchorView];
+		anchorFrame = [anchorView convertRect:anchorView.bounds toView:viewController.view];
 	}
 	
 	self.circlePoint = CGPointMake(CGRectGetMidX(anchorFrame) + self.annotation.contentOffset.width, CGRectGetMidY(anchorFrame) + self.annotation.contentOffset.height);

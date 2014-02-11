@@ -34,6 +34,7 @@
 
 - (id)initWithAnnotation:(id <BPHelpAnnotation>)annotation;
 
+- (UIViewController *)viewControllerForPositioningAnnotationOnAnchorView:(UIView *)anchorView;
 - (void)updateLayoutForOrientation:(UIInterfaceOrientation)interfaceOrientation;
 
 @end

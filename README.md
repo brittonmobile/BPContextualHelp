@@ -10,11 +10,10 @@ BPContextualHelp is a custom control based on the contextual help balloons in th
 
 [Carthage](https://github.com/Carthage/Carthage) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries in your projects.
 
-### Podfile
+### Cartfile
 
-```ruby
-platform :ios, '8.0'
-pod "BPContextualHelp", "~> 1.0"
+```
+github "brittonmobile/BPContextualHelp"
 ```
 
 ## Installation with CocoaPods

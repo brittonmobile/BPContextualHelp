@@ -2,22 +2,35 @@
   <img src="https://raw2.github.com/brittonmobile/BPContextualHelp/master/assets/annotations.jpg" alt="BPContextualHelp" title="BPContextualHelp">
 </p>
 
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 BPContextualHelp is a custom control based on the contextual help balloons in the pre-iOS 7 iPhoto app. It currently provides three types of annotations: a standard balloon, a balloon with a disclosure indicator, and a circular tap. Full accessibility support is provided for the annotations.
 
-## Installation with CocoaPods
+## Installation with Carthage
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries in your projects.
+[Carthage](https://github.com/Carthage/Carthage) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries in your projects.
 
 ### Podfile
 
 ```ruby
-platform :ios, '5.1'
+platform :ios, '8.0'
+pod "BPContextualHelp", "~> 1.0"
+```
+
+## Installation with CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C and Swift, which automates and simplifies the process of using 3rd-party libraries in your projects.
+
+### Podfile
+
+```ruby
+platform :ios, '8.0'
 pod "BPContextualHelp", "~> 1.0"
 ```
 
 ## Requirements
 
-BPContextualHelp 1.0 requires Xcode 5, targeting iOS 5.1 and above. It supports both ARC and non-ARC projects without requiring special build flags.
+BPContextualHelp 1.1 requires Xcode 7, targeting iOS 8.0 and above. It supports both ARC and non-ARC projects without requiring special build flags.
 
 ## Limitations
 
@@ -28,7 +41,7 @@ Help annotations do not currently account for an offset being too large or for o
 Import the header into any file you want to show annotations from:
 
 ```objective-c
-#import "BPContextualHelp.h"
+#import <BPContextualHelp/BPContextualHelp.h>
 ```
 
 ### Show an Annotation

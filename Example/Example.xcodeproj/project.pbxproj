@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9441FD151D8EEC2E005A3F0C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9441FD141D8EEC2E005A3F0C /* Launch Screen.storyboard */; };
+		9441FD231D8EED42005A3F0C /* BPContextualHelpArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 944428D218A2A4040033E026 /* BPContextualHelpArrow.png */; };
+		9441FD241D8EED45005A3F0C /* BPContextualHelpArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944428D318A2A4040033E026 /* BPContextualHelpArrow@2x.png */; };
+		9441FD251D8EED56005A3F0C /* BPContextualHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428C918A1E8280033E026 /* BPContextualHelpViewController.m */; };
+		9441FD261D8EED56005A3F0C /* UIView+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428CB18A1E8280033E026 /* UIView+BPContextualHelp.m */; };
+		9441FD271D8EED56005A3F0C /* NSArray+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428C618A1E6D30033E026 /* NSArray+BPContextualHelp.m */; };
+		9441FD281D8EED56005A3F0C /* NSObject+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428C318A1E57D0033E026 /* NSObject+BPContextualHelp.m */; };
+		9441FD291D8EED56005A3F0C /* NSString+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428CF18A1EBE50033E026 /* NSString+BPContextualHelp.m */; };
+		9441FD2A1D8EED56005A3F0C /* BPHelpAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428A918A1E3280033E026 /* BPHelpAnnotation.m */; };
+		9441FD2B1D8EED56005A3F0C /* BPHelpAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428AB18A1E3280033E026 /* BPHelpAnnotationView.m */; };
+		9441FD2C1D8EED56005A3F0C /* BPHelpDisclosureAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428AD18A1E3280033E026 /* BPHelpDisclosureAnnotation.m */; };
+		9441FD2D1D8EED56005A3F0C /* BPHelpDisclosureAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428AF18A1E3280033E026 /* BPHelpDisclosureAnnotationView.m */; };
+		9441FD2E1D8EED56005A3F0C /* BPHelpOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428B118A1E3280033E026 /* BPHelpOverlayView.m */; };
+		9441FD2F1D8EED56005A3F0C /* BPHelpTapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428B518A1E3280033E026 /* BPHelpTapAnnotation.m */; };
+		9441FD301D8EED56005A3F0C /* BPHelpTapAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428B718A1E3280033E026 /* BPHelpTapAnnotationView.m */; };
+		9441FD311D8EED72005A3F0C /* BPContextualHelpViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428C818A1E8280033E026 /* BPContextualHelpViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD321D8EED72005A3F0C /* UIView+BPContextualHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428CA18A1E8280033E026 /* UIView+BPContextualHelp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD331D8EED72005A3F0C /* NSArray+BPContextualHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428C518A1E6D30033E026 /* NSArray+BPContextualHelp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD341D8EED72005A3F0C /* NSObject+BPContextualHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428C218A1E57D0033E026 /* NSObject+BPContextualHelp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD351D8EED72005A3F0C /* NSString+BPContextualHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428CE18A1EBE50033E026 /* NSString+BPContextualHelp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD361D8EED72005A3F0C /* BPContextualHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428A718A1E3280033E026 /* BPContextualHelp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD371D8EED72005A3F0C /* BPHelpAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428A818A1E3280033E026 /* BPHelpAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD381D8EED72005A3F0C /* BPHelpAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428AA18A1E3280033E026 /* BPHelpAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD391D8EED72005A3F0C /* BPHelpDisclosureAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428AC18A1E3280033E026 /* BPHelpDisclosureAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD3A1D8EED72005A3F0C /* BPHelpDisclosureAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428AE18A1E3280033E026 /* BPHelpDisclosureAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD3B1D8EED72005A3F0C /* BPHelpOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428B018A1E3280033E026 /* BPHelpOverlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD3C1D8EED72005A3F0C /* BPHelpTapAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428B418A1E3280033E026 /* BPHelpTapAnnotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD3D1D8EED72005A3F0C /* BPHelpTapAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 944428B618A1E3280033E026 /* BPHelpTapAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9441FD3E1D8EEDD0005A3F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444287118A1E0F80033E026 /* UIKit.framework */; };
+		9441FD3F1D8EEDD6005A3F0C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444286D18A1E0F80033E026 /* Foundation.framework */; };
 		9444286E18A1E0F80033E026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444286D18A1E0F80033E026 /* Foundation.framework */; };
 		9444287018A1E0F80033E026 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444286F18A1E0F80033E026 /* CoreGraphics.framework */; };
 		9444287218A1E0F80033E026 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444287118A1E0F80033E026 /* UIKit.framework */; };
@@ -14,7 +44,6 @@
 		9444287A18A1E0F80033E026 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444287918A1E0F80033E026 /* main.m */; };
 		9444287E18A1E0F80033E026 /* BPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444287D18A1E0F80033E026 /* BPAppDelegate.m */; };
 		9444288718A1E0F80033E026 /* BPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444288618A1E0F80033E026 /* BPViewController.m */; };
-		9444288918A1E0F80033E026 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9444288818A1E0F80033E026 /* Images.xcassets */; };
 		9444289018A1E0F80033E026 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444288F18A1E0F80033E026 /* XCTest.framework */; };
 		9444289118A1E0F80033E026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444286D18A1E0F80033E026 /* Foundation.framework */; };
 		9444289218A1E0F80033E026 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9444287118A1E0F80033E026 /* UIKit.framework */; };
@@ -47,6 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9441FD141D8EEC2E005A3F0C /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		9441FD1B1D8EED2C005A3F0C /* BPContextualHelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BPContextualHelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9441FD1E1D8EED2C005A3F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9444286A18A1E0F80033E026 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9444286D18A1E0F80033E026 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9444286F18A1E0F80033E026 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,7 +91,6 @@
 		9444287D18A1E0F80033E026 /* BPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPAppDelegate.m; sourceTree = "<group>"; };
 		9444288518A1E0F80033E026 /* BPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BPViewController.h; sourceTree = "<group>"; };
 		9444288618A1E0F80033E026 /* BPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPViewController.m; sourceTree = "<group>"; };
-		9444288818A1E0F80033E026 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9444288E18A1E0F80033E026 /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9444288F18A1E0F80033E026 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9444289718A1E0F80033E026 /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
@@ -96,6 +127,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9441FD171D8EED2C005A3F0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9441FD3F1D8EEDD6005A3F0C /* Foundation.framework in Frameworks */,
+				9441FD3E1D8EEDD0005A3F0C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9444286718A1E0F80033E026 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -119,12 +159,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9441FD1C1D8EED2C005A3F0C /* BPContextualHelp */ = {
+			isa = PBXGroup;
+			children = (
+				9441FD1E1D8EED2C005A3F0C /* Info.plist */,
+			);
+			path = BPContextualHelp;
+			sourceTree = "<group>";
+		};
 		9444286118A1E0F80033E026 = {
 			isa = PBXGroup;
 			children = (
 				944428A618A1E3280033E026 /* BPContextualHelp */,
 				9444287318A1E0F80033E026 /* Example */,
 				9444289518A1E0F80033E026 /* ExampleTests */,
+				9441FD1C1D8EED2C005A3F0C /* BPContextualHelp */,
 				9444286C18A1E0F80033E026 /* Frameworks */,
 				9444286B18A1E0F80033E026 /* Products */,
 			);
@@ -135,6 +184,7 @@
 			children = (
 				9444286A18A1E0F80033E026 /* Example.app */,
 				9444288E18A1E0F80033E026 /* ExampleTests.xctest */,
+				9441FD1B1D8EED2C005A3F0C /* BPContextualHelp.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,7 +208,6 @@
 				9444287D18A1E0F80033E026 /* BPAppDelegate.m */,
 				9444288518A1E0F80033E026 /* BPViewController.h */,
 				9444288618A1E0F80033E026 /* BPViewController.m */,
-				9444288818A1E0F80033E026 /* Images.xcassets */,
 				9444287418A1E0F80033E026 /* Supporting Files */,
 			);
 			path = Example;
@@ -171,6 +220,7 @@
 				9444287618A1E0F80033E026 /* InfoPlist.strings */,
 				9444287918A1E0F80033E026 /* main.m */,
 				9444287B18A1E0F80033E026 /* Example-Prefix.pch */,
+				9441FD141D8EEC2E005A3F0C /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -246,7 +296,48 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9441FD181D8EED2C005A3F0C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9441FD3A1D8EED72005A3F0C /* BPHelpDisclosureAnnotationView.h in Headers */,
+				9441FD311D8EED72005A3F0C /* BPContextualHelpViewController.h in Headers */,
+				9441FD331D8EED72005A3F0C /* NSArray+BPContextualHelp.h in Headers */,
+				9441FD3C1D8EED72005A3F0C /* BPHelpTapAnnotation.h in Headers */,
+				9441FD3D1D8EED72005A3F0C /* BPHelpTapAnnotationView.h in Headers */,
+				9441FD361D8EED72005A3F0C /* BPContextualHelp.h in Headers */,
+				9441FD341D8EED72005A3F0C /* NSObject+BPContextualHelp.h in Headers */,
+				9441FD351D8EED72005A3F0C /* NSString+BPContextualHelp.h in Headers */,
+				9441FD381D8EED72005A3F0C /* BPHelpAnnotationView.h in Headers */,
+				9441FD371D8EED72005A3F0C /* BPHelpAnnotation.h in Headers */,
+				9441FD3B1D8EED72005A3F0C /* BPHelpOverlayView.h in Headers */,
+				9441FD321D8EED72005A3F0C /* UIView+BPContextualHelp.h in Headers */,
+				9441FD391D8EED72005A3F0C /* BPHelpDisclosureAnnotation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		9441FD1A1D8EED2C005A3F0C /* BPContextualHelp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9441FD201D8EED2C005A3F0C /* Build configuration list for PBXNativeTarget "BPContextualHelp" */;
+			buildPhases = (
+				9441FD161D8EED2C005A3F0C /* Sources */,
+				9441FD171D8EED2C005A3F0C /* Frameworks */,
+				9441FD181D8EED2C005A3F0C /* Headers */,
+				9441FD191D8EED2C005A3F0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BPContextualHelp;
+			productName = BPContextualHelp;
+			productReference = 9441FD1B1D8EED2C005A3F0C /* BPContextualHelp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9444286918A1E0F80033E026 /* Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9444289F18A1E0F80033E026 /* Build configuration list for PBXNativeTarget "Example" */;
@@ -292,6 +383,10 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Britton Mobile Development";
 				TargetAttributes = {
+					9441FD1A1D8EED2C005A3F0C = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					9444288D18A1E0F80033E026 = {
 						TestTargetID = 9444286918A1E0F80033E026;
 					};
@@ -312,18 +407,28 @@
 			targets = (
 				9444286918A1E0F80033E026 /* Example */,
 				9444288D18A1E0F80033E026 /* ExampleTests */,
+				9441FD1A1D8EED2C005A3F0C /* BPContextualHelp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9441FD191D8EED2C005A3F0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9441FD241D8EED45005A3F0C /* BPContextualHelpArrow@2x.png in Resources */,
+				9441FD231D8EED42005A3F0C /* BPContextualHelpArrow.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9444286818A1E0F80033E026 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9444288918A1E0F80033E026 /* Images.xcassets in Resources */,
 				9444287818A1E0F80033E026 /* InfoPlist.strings in Resources */,
 				944428D518A2A4040033E026 /* BPContextualHelpArrow@2x.png in Resources */,
+				9441FD151D8EEC2E005A3F0C /* Launch Screen.storyboard in Resources */,
 				944428D418A2A4040033E026 /* BPContextualHelpArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +444,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9441FD161D8EED2C005A3F0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9441FD2E1D8EED56005A3F0C /* BPHelpOverlayView.m in Sources */,
+				9441FD261D8EED56005A3F0C /* UIView+BPContextualHelp.m in Sources */,
+				9441FD301D8EED56005A3F0C /* BPHelpTapAnnotationView.m in Sources */,
+				9441FD2F1D8EED56005A3F0C /* BPHelpTapAnnotation.m in Sources */,
+				9441FD2B1D8EED56005A3F0C /* BPHelpAnnotationView.m in Sources */,
+				9441FD2C1D8EED56005A3F0C /* BPHelpDisclosureAnnotation.m in Sources */,
+				9441FD271D8EED56005A3F0C /* NSArray+BPContextualHelp.m in Sources */,
+				9441FD291D8EED56005A3F0C /* NSString+BPContextualHelp.m in Sources */,
+				9441FD2D1D8EED56005A3F0C /* BPHelpDisclosureAnnotationView.m in Sources */,
+				9441FD2A1D8EED56005A3F0C /* BPHelpAnnotation.m in Sources */,
+				9441FD251D8EED56005A3F0C /* BPContextualHelpViewController.m in Sources */,
+				9441FD281D8EED56005A3F0C /* NSObject+BPContextualHelp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9444286618A1E0F80033E026 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,6 +523,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9441FD211D8EED2C005A3F0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../BPContextualHelp/BPContextualHelp.h;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = BPContextualHelp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brittonmobile.BPContextualHelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9441FD221D8EED2C005A3F0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ../BPContextualHelp/BPContextualHelp.h;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = BPContextualHelp/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brittonmobile.BPContextualHelp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9444289D18A1E0F80033E026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -476,12 +668,10 @@
 		944428A018A1E0F80033E026 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "Example/Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -490,12 +680,10 @@
 		944428A118A1E0F80033E026 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Example/Example-Prefix.pch";
 				INFOPLIST_FILE = "Example/Example-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -546,6 +734,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9441FD201D8EED2C005A3F0C /* Build configuration list for PBXNativeTarget "BPContextualHelp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9441FD211D8EED2C005A3F0C /* Debug */,
+				9441FD221D8EED2C005A3F0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		9444286518A1E0F80033E026 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

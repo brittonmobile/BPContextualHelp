@@ -52,7 +52,7 @@ BOOL BPArrayIsEmpty(NSArray *a)
 - (NSMutableArray *)mutableVersion
 {
 	NSData *data = [NSPropertyListSerialization dataWithPropertyList:self format:NSPropertyListBinaryFormat_v1_0 options:0 error:NULL];
-	return [NSPropertyListSerialization propertyListFromData:data mutabilityOption:NSPropertyListMutableContainersAndLeaves format:NULL errorDescription:NULL];
+	return [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListMutableContainersAndLeaves format:nil error:nil];
 }
 
 - (NSArray *)arrayByRemovingObject:(id)anObject

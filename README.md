@@ -1,5 +1,5 @@
 <p align="center" >
-  <img src="https://raw2.github.com/brittonmobile/BPContextualHelp/master/assets/annotations.jpg" alt="BPContextualHelp" title="BPContextualHelp">
+  <img src="https://github.com/brittonmobile/BPContextualHelp/raw/master/assets/annotations.jpg" alt="BPContextualHelp" title="BPContextualHelp">
 </p>
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)

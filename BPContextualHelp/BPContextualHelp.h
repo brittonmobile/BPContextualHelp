@@ -32,4 +32,10 @@
 	#import "BPHelpTapAnnotation.h"
 	#import "BPHelpTapAnnotationView.h"
 	#import "BPHelpOverlayView.h"
+
+	#import "BPContextualHelpViewController.h"
+	#import "UIView+BPContextualHelp.h"
+	#import "NSArray+BPContextualHelp.h"
+	#import "NSObject+BPContextualHelp.h"
+	#import "NSString+BPContextualHelp.h"
 #endif

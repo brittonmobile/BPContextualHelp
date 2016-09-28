@@ -22,14 +22,14 @@
 
 #import "NSArray+BPContextualHelp.h"
 
-BOOL BPArrayIsEmpty(NSArray *a)
+BOOL BPCHArrayIsEmpty(NSArray *a)
 {
 	return (a == nil || a == (id) [NSNull null] || ![a isKindOfClass:[NSArray class]] || [a count] == 0);
 }
 
-@implementation NSArray (BPExtensions)
+@implementation NSArray (BPCHExtensions)
 
-+ (instancetype)arrayWithArrays:(NSArray *)array, ...
++ (instancetype)bpch_arrayWithArrays:(NSArray *)array, ...
 {
 	if (array == nil)
 	{
@@ -49,13 +49,13 @@ BOOL BPArrayIsEmpty(NSArray *a)
 	return [self arrayWithArray:finalArray];
 }
 
-- (NSMutableArray *)mutableVersion
+- (NSMutableArray *)bpch_mutableVersion
 {
 	NSData *data = [NSPropertyListSerialization dataWithPropertyList:self format:NSPropertyListBinaryFormat_v1_0 options:0 error:NULL];
 	return [NSPropertyListSerialization propertyListWithData:data options:NSPropertyListMutableContainersAndLeaves format:nil error:nil];
 }
 
-- (NSArray *)arrayByRemovingObject:(id)anObject
+- (NSArray *)bpch_arrayByRemovingObject:(id)anObject
 {
 	if (anObject == nil)
 	{
@@ -67,9 +67,9 @@ BOOL BPArrayIsEmpty(NSArray *a)
 	return array;
 }
 
-- (NSArray *)arrayByRemovingObjectsFromArray:(NSArray *)removals
+- (NSArray *)bpch_arrayByRemovingObjectsFromArray:(NSArray *)removals
 {
-	if (BPArrayIsEmpty(removals))
+	if (BPCHArrayIsEmpty(removals))
 	{
 		return self;
 	}
@@ -82,7 +82,7 @@ BOOL BPArrayIsEmpty(NSArray *a)
 	return array;
 }
 
-- (NSArray *)filteredArrayUsingBlock:(BPArrayFilteringBlock)filteringBlock
+- (NSArray *)bpch_filteredArrayUsingBlock:(BPCHArrayFilteringBlock)filteringBlock
 {
 	NSMutableArray *subarray = [NSMutableArray arrayWithCapacity:[self count]];
 	for (id item in self)

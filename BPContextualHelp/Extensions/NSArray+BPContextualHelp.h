@@ -22,19 +22,19 @@
 
 #import <Foundation/Foundation.h>
 
-BOOL BPArrayIsEmpty(NSArray *a);
+BOOL BPCHArrayIsEmpty(NSArray *a);
 
-typedef BOOL (^BPArrayFilteringBlock)(id item);
+typedef BOOL (^BPCHArrayFilteringBlock)(id item);
 
-@interface NSArray (BPExtensions)
+@interface NSArray (BPCHExtensions)
 
-+ (instancetype)arrayWithArrays:(NSArray *)array, ...;
++ (instancetype)bpch_arrayWithArrays:(NSArray *)array, ...;
 
-- (NSMutableArray *)mutableVersion;
+- (NSMutableArray *)bpch_mutableVersion;
 
-- (NSArray *)arrayByRemovingObject:(id)anObject;
-- (NSArray *)arrayByRemovingObjectsFromArray:(NSArray *)removals;
+- (NSArray *)bpch_arrayByRemovingObject:(id)anObject;
+- (NSArray *)bpch_arrayByRemovingObjectsFromArray:(NSArray *)removals;
 
-- (NSArray *)filteredArrayUsingBlock:(BPArrayFilteringBlock)filteringBlock;
+- (NSArray *)bpch_filteredArrayUsingBlock:(BPCHArrayFilteringBlock)filteringBlock;
 
 @end

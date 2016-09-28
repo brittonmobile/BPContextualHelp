@@ -22,39 +22,39 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^BPViewControllerParameterlessBlock)();
-typedef void (^BPViewControllerBooleanBlock)(BOOL);
-typedef BOOL (^BPViewControllerShouldAutorotateBlock)(UIInterfaceOrientation);
-typedef void (^BPViewControllerWillAnimateRotationBlock)(UIInterfaceOrientation, NSTimeInterval);
-typedef id (^BPViewControllerAccessibilityElementAtIndexBlock)(NSInteger);
-typedef NSInteger (^BPViewControllerAccessibilityElementCountBlock)();
-typedef NSInteger (^BPViewControllerIndexOfAccessibilityElementBlock)(id);
+typedef void (^BPCHViewControllerParameterlessBlock)();
+typedef void (^BPCHViewControllerBooleanBlock)(BOOL);
+typedef BOOL (^BPCHViewControllerShouldAutorotateBlock)(UIInterfaceOrientation);
+typedef void (^BPCHViewControllerWillAnimateRotationBlock)(UIInterfaceOrientation, NSTimeInterval);
+typedef id (^BPCHViewControllerAccessibilityElementAtIndexBlock)(NSInteger);
+typedef NSInteger (^BPCHViewControllerAccessibilityElementCountBlock)();
+typedef NSInteger (^BPCHViewControllerIndexOfAccessibilityElementBlock)(id);
 
 @interface BPContextualHelpViewController : UIViewController
 
-@property (nonatomic, copy) BPViewControllerParameterlessBlock loadViewBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_loadViewBlock;
 
-@property (nonatomic, copy) BPViewControllerParameterlessBlock viewDidLoadBlock;
-@property (nonatomic, copy) BPViewControllerParameterlessBlock viewWillUnloadBlock;
-@property (nonatomic, copy) BPViewControllerParameterlessBlock viewDidUnloadBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_viewDidLoadBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_viewWillUnloadBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_viewDidUnloadBlock;
 
-@property (nonatomic, copy) BPViewControllerParameterlessBlock didReceiveMemoryWarningBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_didReceiveMemoryWarningBlock;
 
-@property (nonatomic, copy) BPViewControllerBooleanBlock viewWillAppearBlock;
-@property (nonatomic, copy) BPViewControllerBooleanBlock viewDidAppearBlock;
-@property (nonatomic, copy) BPViewControllerBooleanBlock viewWillDisappearBlock;
-@property (nonatomic, copy) BPViewControllerBooleanBlock viewDidDisappearBlock;
+@property (nonatomic, copy) BPCHViewControllerBooleanBlock bpch_viewWillAppearBlock;
+@property (nonatomic, copy) BPCHViewControllerBooleanBlock bpch_viewDidAppearBlock;
+@property (nonatomic, copy) BPCHViewControllerBooleanBlock bpch_viewWillDisappearBlock;
+@property (nonatomic, copy) BPCHViewControllerBooleanBlock bpch_viewDidDisappearBlock;
 
-@property (nonatomic, copy) BPViewControllerParameterlessBlock viewDidLayoutSubviewsBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_viewDidLayoutSubviewsBlock;
 
-@property (nonatomic, copy) BPViewControllerShouldAutorotateBlock shouldAutorotateBlock;
-@property (nonatomic, copy) BPViewControllerWillAnimateRotationBlock willAnimateRotationBlock;
+@property (nonatomic, copy) BPCHViewControllerShouldAutorotateBlock bpch_shouldAutorotateBlock;
+@property (nonatomic, copy) BPCHViewControllerWillAnimateRotationBlock bpch_willAnimateRotationBlock;
 
-@property (nonatomic, copy) BPViewControllerParameterlessBlock updateViewConstraintsBlock;
-@property (nonatomic, copy) BPViewControllerAccessibilityElementAtIndexBlock accessibilityElementAtIndexBlock;
-@property (nonatomic, copy) BPViewControllerAccessibilityElementCountBlock accessibilityElementCountBlock;
-@property (nonatomic, copy)  BPViewControllerIndexOfAccessibilityElementBlock indexOfAccessibilityElementBlock;
+@property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_updateViewConstraintsBlock;
+@property (nonatomic, copy) BPCHViewControllerAccessibilityElementAtIndexBlock bpch_accessibilityElementAtIndexBlock;
+@property (nonatomic, copy) BPCHViewControllerAccessibilityElementCountBlock bpch_accessibilityElementCountBlock;
+@property (nonatomic, copy) BPCHViewControllerIndexOfAccessibilityElementBlock bpch_indexOfAccessibilityElementBlock;
 
-+ (instancetype)viewController;
++ (instancetype)bpch_viewController;
 
 @end

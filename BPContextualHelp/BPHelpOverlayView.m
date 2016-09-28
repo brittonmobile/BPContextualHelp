@@ -44,7 +44,7 @@
 + (BPHelpOverlayView *)helpOverlayViewWithAnnotations:(NSArray *)annotations
 {
 	BPHelpOverlayView *overlay = [[[self alloc] initWithFrame:CGRectZero] bp_autorelease];
-	if (!BPArrayIsEmpty(annotations)) [overlay.annotations addObjectsFromArray:annotations];
+	if (!BPCHArrayIsEmpty(annotations)) [overlay.annotations addObjectsFromArray:annotations];
 	return overlay;
 }
 
@@ -136,8 +136,8 @@
 	self.window.accessibilityElementsHidden = NO;
 	BPContextualHelpViewController *viewController = [[[BPContextualHelpViewController alloc] init] bp_autorelease];
 	viewController.view = self.shieldView;
-	viewController.shouldAutorotateBlock = ^(UIInterfaceOrientation interfaceOrientation) { return YES; };
-	viewController.willAnimateRotationBlock = ^(UIInterfaceOrientation interfaceOrientation, NSTimeInterval duration)
+	viewController.bpch_shouldAutorotateBlock = ^(UIInterfaceOrientation interfaceOrientation) { return YES; };
+	viewController.bpch_willAnimateRotationBlock = ^(UIInterfaceOrientation interfaceOrientation, NSTimeInterval duration)
 	{
 		if ([self.annotationViews count] != [self.annotationAccessibilityElements count])
 		{
@@ -154,13 +154,13 @@
 		
 		[self _updateAccessibilityElements];
 	};
-	viewController.accessibilityElementAtIndexBlock = ^(NSInteger index){
+	viewController.bpch_accessibilityElementAtIndexBlock = ^(NSInteger index){
 		return [self accessibilityElementAtIndex:index];
 	};
-	viewController.accessibilityElementCountBlock = ^{
+	viewController.bpch_accessibilityElementCountBlock = ^{
 		return [self accessibilityElementCount];
 	};
-	viewController.indexOfAccessibilityElementBlock = ^(id element){
+	viewController.bpch_indexOfAccessibilityElementBlock = ^(id element){
 		return [self indexOfAccessibilityElement:element];
 	};
 	self.window.rootViewController = viewController;
@@ -221,7 +221,7 @@
 
 - (id)accessibilityElementAtIndex:(NSInteger)index
 {
-	NSArray *filteredElements = [self.annotationAccessibilityElements filteredArrayUsingBlock:^BOOL(id item) {
+	NSArray *filteredElements = [self.annotationAccessibilityElements bpch_filteredArrayUsingBlock:^BOOL(id item) {
 		return (item != [NSNull null]);
 	}];
 	return filteredElements[index];
@@ -229,7 +229,7 @@
 
 - (NSInteger)accessibilityElementCount
 {
-	NSArray *filteredElements = [self.annotationAccessibilityElements filteredArrayUsingBlock:^BOOL(id item) {
+	NSArray *filteredElements = [self.annotationAccessibilityElements bpch_filteredArrayUsingBlock:^BOOL(id item) {
 		return (item != [NSNull null]);
 	}];
 	return [filteredElements count];
@@ -237,7 +237,7 @@
 
 - (NSInteger)indexOfAccessibilityElement:(id)element
 {
-	NSArray *filteredElements = [self.annotationAccessibilityElements filteredArrayUsingBlock:^BOOL(id item) {
+	NSArray *filteredElements = [self.annotationAccessibilityElements bpch_filteredArrayUsingBlock:^BOOL(id item) {
 		return (item != [NSNull null]);
 	}];
 	return [filteredElements indexOfObject:element];

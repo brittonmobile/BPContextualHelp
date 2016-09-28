@@ -99,7 +99,7 @@ static const CGFloat BPFontSize = 12.0;
 	CGRect anchorFrame = CGRectMake(anchorPoint.x, anchorPoint.y, 1.0, 1.0);
 	if (anchorView != nil)
 	{
-		UIViewController *viewController = [anchorView viewController];
+		UIViewController *viewController = [anchorView bpch_viewController];
 		if (viewController.navigationController != nil) viewController = viewController.navigationController;
 		
 		if (viewController.presentingViewController != nil && viewController.modalPresentationStyle == UIModalPresentationFullScreen)
@@ -121,7 +121,7 @@ static const CGFloat BPFontSize = 12.0;
 	
 	//Figure out the content size
 	CGSize contentSize = CGSizeZero;
-	if (!BPStringIsEmpty(self.annotation.text))
+	if (!BPCHStringIsEmpty(self.annotation.text))
 	{
 		if ([self.annotation.text respondsToSelector:@selector(boundingRectWithSize:options:attributes:context:)])
 		{

@@ -24,7 +24,7 @@
 
 @implementation UIView (BPContextualHelp)
 
-- (UIViewController *)viewController
+- (UIViewController *)bpch_viewController
 {
 	for (UIView *next = [self superview]; next != nil; next = [next superview])
 	{

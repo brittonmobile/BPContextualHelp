@@ -30,7 +30,7 @@
 
 @implementation BPContextualHelpViewController
 
-+ (instancetype)viewController
++ (instancetype)bpch_viewController
 {
 	return [[[self alloc] initWithNibName:nil bundle:nil] bp_autorelease];
 }
@@ -38,26 +38,26 @@
 #if !__has_feature(objc_arc)
 - (void)dealloc
 {
-	[_loadViewBlock release], _loadViewBlock = nil;
-	[_viewDidLoadBlock release], _viewDidLoadBlock = nil;
-	[_viewWillUnloadBlock release], _viewWillUnloadBlock = nil;
-	[_viewDidUnloadBlock release], _viewDidUnloadBlock = nil;
+	[_bpch_loadViewBlock release], _bpch_loadViewBlock = nil;
+	[_bpch_viewDidLoadBlock release], _bpch_viewDidLoadBlock = nil;
+	[_bpch_viewWillUnloadBlock release], _bpch_viewWillUnloadBlock = nil;
+	[_bpch_viewDidUnloadBlock release], _bpch_viewDidUnloadBlock = nil;
 	
-	[_didReceiveMemoryWarningBlock release], _didReceiveMemoryWarningBlock = nil;
+	[_bpch_didReceiveMemoryWarningBlock release], _bpch_didReceiveMemoryWarningBlock = nil;
 	
-	[_viewWillAppearBlock release], _viewWillAppearBlock = nil;
-	[_viewDidAppearBlock release], _viewDidAppearBlock = nil;
-	[_viewWillDisappearBlock release], _viewWillDisappearBlock = nil;
-	[_viewDidDisappearBlock release], _viewDidDisappearBlock = nil;
+	[_bpch_viewWillAppearBlock release], _bpch_viewWillAppearBlock = nil;
+	[_bpch_viewDidAppearBlock release], _bpch_viewDidAppearBlock = nil;
+	[_bpch_viewWillDisappearBlock release], _bpch_viewWillDisappearBlock = nil;
+	[_bpch_viewDidDisappearBlock release], _bpch_viewDidDisappearBlock = nil;
 	
-	[_shouldAutorotateBlock release], _shouldAutorotateBlock = nil;
-	[_willAnimateRotationBlock release], _willAnimateRotationBlock = nil;
+	[_bpch_shouldAutorotateBlock release], _bpch_shouldAutorotateBlock = nil;
+	[_bpch_willAnimateRotationBlock release], _bpch_willAnimateRotationBlock = nil;
 	
-	[_updateViewConstraintsBlock release], _updateViewConstraintsBlock = nil;
+	[_bpch_updateViewConstraintsBlock release], _bpch_updateViewConstraintsBlock = nil;
 	
-	[_accessibilityElementAtIndexBlock release], _accessibilityElementAtIndexBlock = nil;
-	[_accessibilityElementCountBlock release], _accessibilityElementCountBlock = nil;
-	[_indexOfAccessibilityElementBlock release], _indexOfAccessibilityElementBlock = nil;
+	[_bpch_accessibilityElementAtIndexBlock release], _bpch_accessibilityElementAtIndexBlock = nil;
+	[_bpch_accessibilityElementCountBlock release], _bpch_accessibilityElementCountBlock = nil;
+	[_bpch_indexOfAccessibilityElementBlock release], _bpch_indexOfAccessibilityElementBlock = nil;
 	
 	[super dealloc];
 }
@@ -68,47 +68,47 @@
 
 - (void)loadView
 {
-	if (self.loadViewBlock != nil) self.loadViewBlock();
+	if (self.bpch_loadViewBlock != nil) self.bpch_loadViewBlock();
 }
 
 - (void)viewDidLoad
 {
-	if (self.viewDidLoadBlock != nil) self.viewDidLoadBlock();
+	if (self.bpch_viewDidLoadBlock != nil) self.bpch_viewDidLoadBlock();
 }
 
 - (void)viewWillUnload
 {
-	if (self.viewWillUnloadBlock != nil) self.viewWillUnloadBlock();
+	if (self.bpch_viewWillUnloadBlock != nil) self.bpch_viewWillUnloadBlock();
 }
 
 - (void)viewDidUnload
 {
-	if (self.viewDidUnloadBlock != nil) self.viewDidUnloadBlock();
+	if (self.bpch_viewDidUnloadBlock != nil) self.bpch_viewDidUnloadBlock();
 }
 
 - (void)didReceiveMemoryWarning
 {
-	if (self.didReceiveMemoryWarningBlock != nil) self.didReceiveMemoryWarningBlock();
+	if (self.bpch_didReceiveMemoryWarningBlock != nil) self.bpch_didReceiveMemoryWarningBlock();
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-	if (self.viewWillAppearBlock != nil) self.viewWillAppearBlock(animated);
+	if (self.bpch_viewWillAppearBlock != nil) self.bpch_viewWillAppearBlock(animated);
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-	if (self.viewDidAppearBlock != nil) self.viewDidAppearBlock(animated);
+	if (self.bpch_viewDidAppearBlock != nil) self.bpch_viewDidAppearBlock(animated);
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-	if (self.viewWillDisappearBlock != nil) self.viewWillDisappearBlock(animated);
+	if (self.bpch_viewWillDisappearBlock != nil) self.bpch_viewWillDisappearBlock(animated);
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-	if (self.viewDidDisappearBlock != nil) self.viewDidDisappearBlock(animated);
+	if (self.bpch_viewDidDisappearBlock != nil) self.bpch_viewDidDisappearBlock(animated);
 }
 
 #pragma mark -
@@ -116,13 +116,13 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
-	if (self.shouldAutorotateBlock != nil) return self.shouldAutorotateBlock(toInterfaceOrientation);
+	if (self.bpch_shouldAutorotateBlock != nil) return self.bpch_shouldAutorotateBlock(toInterfaceOrientation);
 	return NO;
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-	if (self.willAnimateRotationBlock != nil) self.willAnimateRotationBlock(toInterfaceOrientation, duration);
+	if (self.bpch_willAnimateRotationBlock != nil) self.bpch_willAnimateRotationBlock(toInterfaceOrientation, duration);
 }
 
 #pragma mark -
@@ -131,7 +131,7 @@
 - (void)updateViewConstraints
 {
 	[super updateViewConstraints];
-	if (self.updateViewConstraintsBlock != nil) self.updateViewConstraintsBlock();
+	if (self.bpch_updateViewConstraintsBlock != nil) self.bpch_updateViewConstraintsBlock();
 }
 
 #pragma mark -
@@ -139,19 +139,19 @@
 
 - (id)accessibilityElementAtIndex:(NSInteger)index
 {
-	if (self.accessibilityElementAtIndexBlock != nil) return self.accessibilityElementAtIndexBlock(index);
+	if (self.bpch_accessibilityElementAtIndexBlock != nil) return self.bpch_accessibilityElementAtIndexBlock(index);
 	return nil;
 }
 
 - (NSInteger)accessibilityElementCount
 {
-	if (self.accessibilityElementCountBlock != nil) return self.accessibilityElementCountBlock();
+	if (self.bpch_accessibilityElementCountBlock != nil) return self.bpch_accessibilityElementCountBlock();
 	return 0;
 }
 
 - (NSInteger)indexOfAccessibilityElement:(id)element
 {
-	if (self.indexOfAccessibilityElementBlock != nil) return self.indexOfAccessibilityElementBlock(element);
+	if (self.bpch_indexOfAccessibilityElementBlock != nil) return self.bpch_indexOfAccessibilityElementBlock(element);
 	return NSNotFound;
 }
 

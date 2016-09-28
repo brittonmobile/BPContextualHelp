@@ -114,7 +114,7 @@ static const CGFloat BPFontSize = 12.0;
 	CGRect anchorFrame = CGRectMake(anchorPoint.x, anchorPoint.y, 1.0, 1.0);
 	if (anchorView != nil)
 	{
-		UIViewController *viewController = [anchorView viewController];
+		UIViewController *viewController = [anchorView bpch_viewController];
 		anchorFrame = [anchorView convertRect:anchorView.bounds toView:viewController.view];
 	}
 	

@@ -24,6 +24,6 @@
 
 @interface UIView (BPContextualHelp)
 
-@property (nonatomic, readonly) UIViewController *viewController;
+@property (nonatomic, readonly) UIViewController *bpch_viewController;
 
 @end

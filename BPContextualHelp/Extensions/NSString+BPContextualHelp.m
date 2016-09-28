@@ -22,7 +22,7 @@
 
 #import "NSString+BPContextualHelp.h"
 
-BOOL BPStringIsEmpty(NSString *s)
+BOOL BPCHStringIsEmpty(NSString *s)
 {
 	return (s == nil || s == (id) [NSNull null] || [s length] == 0);
 }

@@ -22,7 +22,7 @@
 
 #import <Foundation/Foundation.h>
 
-BOOL BPStringIsEmpty(NSString *s);
+BOOL BPCHStringIsEmpty(NSString *s);
 
 @interface NSString (BPContextualHelp)
 

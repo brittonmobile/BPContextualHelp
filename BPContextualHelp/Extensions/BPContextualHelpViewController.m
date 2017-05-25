@@ -45,6 +45,10 @@
 	
 	[_bpch_didReceiveMemoryWarningBlock release], _bpch_didReceiveMemoryWarningBlock = nil;
 	
+	[_bpch_preferredStatusBarStyleBlock release], _bpch_preferredStatusBarStyleBlock release = nil;
+	[_bpch_childViewControllerForStatusBarHiddenBlock release], _bpch_childViewControllerForStatusBarHiddenBlock = nil;
+	[_bpch_childViewControllerForStatusBarStyleBlock release], _bpch_childViewControllerForStatusBarStyleBlock = nil;
+	
 	[_bpch_viewWillAppearBlock release], _bpch_viewWillAppearBlock = nil;
 	[_bpch_viewDidAppearBlock release], _bpch_viewDidAppearBlock = nil;
 	[_bpch_viewWillDisappearBlock release], _bpch_viewWillDisappearBlock = nil;
@@ -89,6 +93,24 @@
 - (void)didReceiveMemoryWarning
 {
 	if (self.bpch_didReceiveMemoryWarningBlock != nil) self.bpch_didReceiveMemoryWarningBlock();
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	if (self.bpch_preferredStatusBarStyleBlock != nil) return self.bpch_preferredStatusBarStyleBlock();
+	return [super preferredStatusBarStyle];
+}
+
+- (UIViewController *)childViewControllerForStatusBarStyle
+{
+	if (self.bpch_childViewControllerForStatusBarStyleBlock != nil) return self.bpch_childViewControllerForStatusBarStyleBlock();
+	return [super childViewControllerForStatusBarStyle];
+}
+
+- (UIViewController *)childViewControllerForStatusBarHidden
+{
+	if (self.bpch_childViewControllerForStatusBarHiddenBlock != nil) return self.bpch_childViewControllerForStatusBarHiddenBlock();
+	return [super childViewControllerForStatusBarHidden];
 }
 
 - (void)viewWillAppear:(BOOL)animated

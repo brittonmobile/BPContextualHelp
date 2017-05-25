@@ -27,6 +27,7 @@
 
 #import "BPContextualHelpViewController.h"
 #import "NSArray+BPContextualHelp.h"
+#import "UIWindow+BPContextualHelp.h"
 
 @interface BPHelpOverlayView ()
 
@@ -153,6 +154,12 @@
 		}
 		
 		[self _updateAccessibilityElements];
+	};
+	viewController.bpch_childViewControllerForStatusBarHiddenBlock = ^UIViewController *{
+		return mainWindow.bpch_visibleViewController;
+	};
+	viewController.bpch_childViewControllerForStatusBarStyleBlock = ^UIViewController *{
+		return mainWindow.bpch_visibleViewController;
 	};
 	viewController.bpch_accessibilityElementAtIndexBlock = ^(NSInteger index){
 		return [self accessibilityElementAtIndex:index];

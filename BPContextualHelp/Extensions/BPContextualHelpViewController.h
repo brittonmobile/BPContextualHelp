@@ -29,6 +29,8 @@ typedef void (^BPCHViewControllerWillAnimateRotationBlock)(UIInterfaceOrientatio
 typedef id (^BPCHViewControllerAccessibilityElementAtIndexBlock)(NSInteger);
 typedef NSInteger (^BPCHViewControllerAccessibilityElementCountBlock)();
 typedef NSInteger (^BPCHViewControllerIndexOfAccessibilityElementBlock)(id);
+typedef UIStatusBarStyle (^BPViewControllerStatusBarStyleBlock)();
+typedef UIViewController * (^BPViewControllerChildViewControllerBlock)();
 
 @interface BPContextualHelpViewController : UIViewController
 
@@ -39,6 +41,10 @@ typedef NSInteger (^BPCHViewControllerIndexOfAccessibilityElementBlock)(id);
 @property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_viewDidUnloadBlock;
 
 @property (nonatomic, copy) BPCHViewControllerParameterlessBlock bpch_didReceiveMemoryWarningBlock;
+
+@property (nonatomic, copy) BPViewControllerStatusBarStyleBlock bpch_preferredStatusBarStyleBlock;
+@property (nonatomic, copy) BPViewControllerChildViewControllerBlock bpch_childViewControllerForStatusBarHiddenBlock;
+@property (nonatomic, copy) BPViewControllerChildViewControllerBlock bpch_childViewControllerForStatusBarStyleBlock;
 
 @property (nonatomic, copy) BPCHViewControllerBooleanBlock bpch_viewWillAppearBlock;
 @property (nonatomic, copy) BPCHViewControllerBooleanBlock bpch_viewDidAppearBlock;

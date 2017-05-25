@@ -63,6 +63,9 @@
 		944428D018A1EBE50033E026 /* NSString+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 944428CF18A1EBE50033E026 /* NSString+BPContextualHelp.m */; };
 		944428D418A2A4040033E026 /* BPContextualHelpArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 944428D218A2A4040033E026 /* BPContextualHelpArrow.png */; };
 		944428D518A2A4040033E026 /* BPContextualHelpArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 944428D318A2A4040033E026 /* BPContextualHelpArrow@2x.png */; };
+		948074E51ED65755004F49B2 /* UIWindow+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 948074E41ED65755004F49B2 /* UIWindow+BPContextualHelp.m */; };
+		948074E61ED659E5004F49B2 /* UIWindow+BPContextualHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 948074E31ED65755004F49B2 /* UIWindow+BPContextualHelp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948074E71ED65A5D004F49B2 /* UIWindow+BPContextualHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 948074E41ED65755004F49B2 /* UIWindow+BPContextualHelp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +127,8 @@
 		944428D218A2A4040033E026 /* BPContextualHelpArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BPContextualHelpArrow.png; sourceTree = "<group>"; };
 		944428D318A2A4040033E026 /* BPContextualHelpArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BPContextualHelpArrow@2x.png"; sourceTree = "<group>"; };
 		944428D618A2ADA50033E026 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		948074E31ED65755004F49B2 /* UIWindow+BPContextualHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+BPContextualHelp.h"; sourceTree = "<group>"; };
+		948074E41ED65755004F49B2 /* UIWindow+BPContextualHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+BPContextualHelp.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +286,8 @@
 				944428C318A1E57D0033E026 /* NSObject+BPContextualHelp.m */,
 				944428CE18A1EBE50033E026 /* NSString+BPContextualHelp.h */,
 				944428CF18A1EBE50033E026 /* NSString+BPContextualHelp.m */,
+				948074E31ED65755004F49B2 /* UIWindow+BPContextualHelp.h */,
+				948074E41ED65755004F49B2 /* UIWindow+BPContextualHelp.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +308,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948074E61ED659E5004F49B2 /* UIWindow+BPContextualHelp.h in Headers */,
 				9441FD3A1D8EED72005A3F0C /* BPHelpDisclosureAnnotationView.h in Headers */,
 				9441FD311D8EED72005A3F0C /* BPContextualHelpViewController.h in Headers */,
 				9441FD331D8EED72005A3F0C /* NSArray+BPContextualHelp.h in Headers */,
@@ -457,6 +465,7 @@
 				9441FD271D8EED56005A3F0C /* NSArray+BPContextualHelp.m in Sources */,
 				9441FD291D8EED56005A3F0C /* NSString+BPContextualHelp.m in Sources */,
 				9441FD2D1D8EED56005A3F0C /* BPHelpDisclosureAnnotationView.m in Sources */,
+				948074E71ED65A5D004F49B2 /* UIWindow+BPContextualHelp.m in Sources */,
 				9441FD2A1D8EED56005A3F0C /* BPHelpAnnotation.m in Sources */,
 				9441FD251D8EED56005A3F0C /* BPContextualHelpViewController.m in Sources */,
 				9441FD281D8EED56005A3F0C /* NSObject+BPContextualHelp.m in Sources */,
@@ -474,6 +483,7 @@
 				944428CC18A1E8280033E026 /* BPContextualHelpViewController.m in Sources */,
 				944428C718A1E6D30033E026 /* NSArray+BPContextualHelp.m in Sources */,
 				9444287E18A1E0F80033E026 /* BPAppDelegate.m in Sources */,
+				948074E51ED65755004F49B2 /* UIWindow+BPContextualHelp.m in Sources */,
 				944428D018A1EBE50033E026 /* NSString+BPContextualHelp.m in Sources */,
 				944428BA18A1E3280033E026 /* BPHelpDisclosureAnnotation.m in Sources */,
 				944428B918A1E3280033E026 /* BPHelpAnnotationView.m in Sources */,
@@ -741,6 +751,7 @@
 				9441FD221D8EED2C005A3F0C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9444286518A1E0F80033E026 /* Build configuration list for PBXProject "Example" */ = {
 			isa = XCConfigurationList;

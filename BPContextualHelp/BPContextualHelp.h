@@ -38,4 +38,5 @@
 	#import "NSArray+BPContextualHelp.h"
 	#import "NSObject+BPContextualHelp.h"
 	#import "NSString+BPContextualHelp.h"
+	#import "UIWindow+BPContextualHelp.h"
 #endif
